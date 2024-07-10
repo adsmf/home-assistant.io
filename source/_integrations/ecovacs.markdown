@@ -38,14 +38,14 @@ With `advanced_mode` enabled, users can use their self-hosted instance over the 
 
 ## Provided entities
 
-The Ecovacs integration provides a vacuum {% term entity %} for each device that is connected to your Ecovacs account.
+The Ecovacs integration provides a vacuum or mower {% term entity %} for each device that is connected to your Ecovacs account.
 
-Using the vacuum entity, you can monitor and control your Ecovacs Deebot vacuum.
+Using the vacuum or mower entity, you can monitor and control your Ecovacs Deebot vacuum or mower.
 
 Additionally, **depending on your model**, the integration provides the following entities:
 
 - **Binary sensor**:
-  - `Mop attached`: On if the mop is attached. Note: If you do not see the state change to `Mop attached` in Home Assistant, you may need to wake up the robot in order to push the state change. Some models report an entity state change only if the overall status of the vacuum has changed. For example, if the overall state changes from `docked` to `cleaning`.
+  - `Mop attached`: On if the mop is attached. Note: If you do not see the state change to `Mop attached` in Home Assistant, you may need to wake up the robot in order to push the state change. Some models report an entity state change only if the overall status of the vacuum or mower has changed. For example, if the overall state changes from `docked` to `cleaning`.
 - **Button**:
   - `Reset lifespan`: For each supported component, a button entity to reset the lifespan will be created. All disabled by default.
   - `Relocate`: Button entity to trigger manual relocation.
@@ -55,6 +55,7 @@ Additionally, **depending on your model**, the integration provides the followin
   - `Map`: The floorplan/map as an image in SVG format.
 - **Number**:
   - `Clean count`: Set the number of times to clean the area.
+  - `Cut direction`: Set the mower cut direction.
   - `Volume`: Set the volume.
 - **Select**:
   - `Water amount`: Specify the water amount used during cleaning with the mop.
